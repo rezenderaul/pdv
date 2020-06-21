@@ -1,0 +1,179 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    background: darkcyan;
+}
+
+.white {
+    background: white;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+h5 {
+    text-align: center;
+    background: blue;
+    color: white;
+    margin-top: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+body {
+    padding: 2vh 1vw;
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    grid-template-areas: "header header"
+                          "left right";
+}
+
+header {
+    grid-area: header;
+    margin-bottom: 2vh;
+}
+
+/*
+****************
+***** LEFT *****
+****************
+ */
+
+
+#left {
+    display: grid;
+    margin-right: 1vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 63vh 20vh;
+    grid-template-areas: "start info"
+                         "footer footer";
+}
+
+#start, #info {
+    margin-bottom: 2vh;
+    width: 23.3vw;
+}
+
+
+/*
+******************
+***** START ******
+******************
+ */
+
+#start {
+    grid-area: start;
+    margin-right: 1vw;
+    display: grid;
+    grid-template-rows: 46.5vh 16.5vh;
+    grid-template-areas: 'img'
+                         'code';
+}
+
+#img {
+    grid-area: img;
+}
+
+#code {
+    grid-area: code;
+    margin-top: 2vh;
+}
+
+
+/*
+****************
+***** INFO *****
+****************
+ */
+
+#info {
+    grid-area: info;
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+#info > div {
+    margin-bottom: 2vh;
+}
+
+#info > div:nth-child(4) {
+    margin-bottom: 0;
+    align-items: end;
+}
+
+
+/*
+******************
+***** FOOTER *****
+******************
+ */
+
+#footer {
+    width: 47.5vw;
+    margin-top: 1.9vh;
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 16vh;
+}
+
+#footer div:nth-child(1), #footer div:nth-child(2), #footer div:nth-child(3){
+    width: 15vw;
+}
+
+#footer div:nth-child(2){
+    justify-self: center;
+}
+
+#footer div:nth-child(3){
+    justify-self: end;
+}
+
+/*
+*****************
+***** RIGHT *****
+*****************
+ */
+
+
+#right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 57vh 12vh 12vh;
+    grid-template-areas: "products products"
+                         "subtotal subtotal"
+                         "recebido troco";
+}
+
+
+#products {
+    grid-area: products;
+}
+
+#subtotal {
+    grid-area: subtotal;
+}
+
+#products, #subtotal {
+    margin-bottom: 2vh;
+}
+
+#recebido, #troco {
+    width: 23.9vw;
+}
+
+#recebido {
+    grid-area: recebido;
+    margin-right: 1vw;
+}
+
+#troco {
+    grid-area: troco;
+    justify-self: end;
+}
