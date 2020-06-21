@@ -1,10 +1,15 @@
-html, body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+body{
     height: 100vh;
     width: 100vw;
     background: darkcyan;
+    padding: 1.5vh 1vw;
 }
 
 .white {
@@ -12,69 +17,72 @@ html, body {
     border-radius: 10px;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 15px;
-}
-
 h5 {
-    text-align: center;
     background: blue;
+    font-weight: bold;
     color: white;
-    margin-top: 0;
+    text-align: center;
+    font-size: 1em;
     border-radius: 10px 10px 0 0;
 }
 
-body {
-    padding: 2vh 1vw;
+/*
+****************
+***** MAIN *****
+****************
+ */
+
+main {
+    height: 97vh;
+    width: 98vw;
     display: grid;
     grid-auto-columns: auto;
     grid-auto-rows: auto;
-    grid-template-areas: "header header"
-                          "left right";
+    grid-gap: 2vh;
+    grid-template-rows: 10vh;
+    grid-template-areas: 'header header'
+                         'section aside';
 }
 
 header {
     grid-area: header;
-    margin-bottom: 2vh;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
 }
+
+section {
+    grid-area: section;
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 3vh;
+    grid-column-gap: 1vw;
+    grid-template-areas: 'img bars'
+                         'img price'
+                         'img total'
+                         'code cpf'
+                         'footer footer';
+}
+
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 2vh;
+    grid-template-rows: 55vh;
+    grid-template-areas: 'products products'
+                         'subtotal subtotal'
+                         'recebido troco';
+}
+
 
 /*
-****************
-***** LEFT *****
-****************
+*******************
+***** SECTION *****
+*******************
  */
-
-
-#left {
-    display: grid;
-    margin-right: 1vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 63vh 20vh;
-    grid-template-areas: "start info"
-                         "footer footer";
-}
-
-#start, #info {
-    margin-bottom: 2vh;
-    width: 23.3vw;
-}
-
-
-/*
-******************
-***** START ******
-******************
- */
-
-#start {
-    grid-area: start;
-    margin-right: 1vw;
-    display: grid;
-    grid-template-rows: 46.5vh 16.5vh;
-    grid-template-areas: 'img'
-                         'code';
-}
 
 #img {
     grid-area: img;
@@ -82,75 +90,37 @@ header {
 
 #code {
     grid-area: code;
-    margin-top: 2vh;
 }
 
-
-/*
-****************
-***** INFO *****
-****************
- */
-
-#info {
-    grid-area: info;
-    display: grid;
-    grid-auto-rows: auto;
+#bars {
+    grid-area: bars;
 }
 
-#info > div {
-    margin-bottom: 2vh;
+#price {
+    grid-area: price;
 }
 
-#info > div:nth-child(4) {
-    margin-bottom: 0;
-    align-items: end;
+#total {
+    grid-area: total;
 }
 
+#cpf {
+    grid-area: cpf;
+}
 
-/*
-******************
-***** FOOTER *****
-******************
- */
-
-#footer {
-    width: 47.5vw;
-    margin-top: 1.9vh;
+footer {
     grid-area: footer;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 16vh;
+    grid-column-gap: 1vw;
 }
 
-#footer div:nth-child(1), #footer div:nth-child(2), #footer div:nth-child(3){
-    width: 15vw;
-}
-
-#footer div:nth-child(2){
-    justify-self: center;
-}
-
-#footer div:nth-child(3){
-    justify-self: end;
-}
 
 /*
 *****************
-***** RIGHT *****
+***** ASIDE *****
 *****************
  */
-
-
-#right {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 57vh 12vh 12vh;
-    grid-template-areas: "products products"
-                         "subtotal subtotal"
-                         "recebido troco";
-}
-
 
 #products {
     grid-area: products;
@@ -160,20 +130,21 @@ header {
     grid-area: subtotal;
 }
 
-#products, #subtotal {
-    margin-bottom: 2vh;
-}
-
-#recebido, #troco {
-    width: 23.9vw;
-}
-
 #recebido {
     grid-area: recebido;
-    margin-right: 1vw;
 }
 
 #troco {
     grid-area: troco;
-    justify-self: end;
+}
+
+
+/*
+******************
+***** FOOTER *****
+******************
+ */
+
+footer > div {
+    background: white;
 }

@@ -1,17 +1,17 @@
-# GRID Alinhamneto
+# GRID Alinhamento
 ___
 
 Existem 6 tipos de alinhamentos:
 1. `justify-contents`
 2. `align-contents`
 3. `justify-items`
-4. `align-itens`
+4. `align-items`
 5. `justify-self`
 6. `align-self`
 
-Vamos separ em 2 grupos:
+Vamos separar em 2 grupos:
 1. `justify` e `align`
-2. `contet`, `items` e `self`
+2. `content`, `items` e `self`
 
 ---
 
@@ -32,7 +32,7 @@ Juntando o `justify` ou `align`, com esses elementos: `content`, `items` e `self
 ### Content
 `justify-content` e `align-content` nos permite alinhar o próprio grid, relativo ao espaço fora do grid.
 
-O uso dessas propriedades são raras, pois só é aplicado caso o grid seja menor que area definida, (por exemplo: quando usamos px no tamanho da grid, poderemos terminar com um grid pequeno, para o tamanho da aréa do grid).
+O uso dessas propriedades são raras, pois só é aplicado caso o grid seja menor que área definida, (por exemplo: quando usamos px no tamanho da grid, poderemos terminar com um grid pequeno, para o tamanho da areá do grid).
 
 Podemos utilizar **7 valores** utilizados dentro do container
 1. start
@@ -46,7 +46,7 @@ Podemos utilizar **7 valores** utilizados dentro do container
 ---
 
 ### Items
-`justify-items` e `align-items` vão permitir alinharos itens da grid, em qualquer espaço disponível, na célula que ele habitar.
+`justify-items` e `align-items` vão permitir alinharmos itens da grid, em qualquer espaço disponível, na célula que ele habitar.
 
 Podemos utilizar **4 valores**
 1. start
