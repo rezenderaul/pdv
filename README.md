@@ -1,3 +1,7 @@
+Iniciei esse projeto após assistir um vídeo no youtube, sobre **CSS GRID** com @maykbrito, da @Rocketseat, gostei muito das informações fornecidas.
+
+---
+
 # CSS GRID
 
 ## GRID
